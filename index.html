@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Map</title>
+
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <div id="form">
+        <div class="choose_user">
+            <input type="text" id="user_name" required/>
+            <label>使用者名稱</label>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+        <button type="btn" onclick="setUser()">設定使用者</button>
+        <button type="btn" onclick="putUserData()">查詢位置</button>
+        <button type="btn" onclick="addNewUser()">註冊使用者</button>
+    </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlUmQRs4AVhOKlElVmDkZWqMc5VcoZWgY&callback=initMap"
+        async></script>
+
+</body>
+
+</html>
